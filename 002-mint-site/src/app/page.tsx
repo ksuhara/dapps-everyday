@@ -63,8 +63,15 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      {firstNftLoading ? (
-        <></>
+      {firstNftLoading ||
+      !unclaimedSupply ||
+      !claimedSupply ||
+      !activeClaimCondition ? (
+        <>
+          <div className="px-3 py-1 text-xs font-medium leading-none text-center text-blue-800 bg-blue-200 rounded-full animate-pulse dark:bg-blue-900 dark:text-blue-200">
+            loading...
+          </div>
+        </>
       ) : (
         <>
           <img
