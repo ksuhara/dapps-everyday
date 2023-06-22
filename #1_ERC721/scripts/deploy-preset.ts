@@ -1,9 +1,11 @@
 import { ethers } from "hardhat";
 
 async function main() {
-  const simpleERC721 = await ethers.deployContract("SimpleERC721");
+  const presetERC721 = await ethers.deployContract("PresetERC721");
 
-  await simpleERC721.waitForDeployment();
+  const a = await presetERC721.waitForDeployment();
+  console.log(await a.getAddress())
+
 }
 
 // We recommend this pattern to be able to use async/await everywhere
