@@ -4,12 +4,7 @@ import {
   ConnectWallet,
   useActiveClaimConditionForWallet,
   useAddress,
-  useClaimedNFTSupply,
   useContract,
-  useContractMetadata,
-  useNFT,
-  useUnclaimedNFTSupply,
-  useClaimNFT,
   Web3Button,
 } from "@thirdweb-dev/react";
 import { useMemo, useState } from "react";
