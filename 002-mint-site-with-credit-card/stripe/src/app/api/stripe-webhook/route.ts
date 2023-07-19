@@ -30,9 +30,13 @@ export async function POST(request: Request) {
       const checkoutSessionCompleted = event.data.object;
       // Then define and call a function to handle the event checkout.session.completed
 
-      const sdk = new ThirdwebSDK("mumbai", {
-        secretKey: process.env.SECRET_KEY,
-      });
+      const sdk = ThirdwebSDK.fromPrivateKey(
+        process.env.PRIVATE_KEY || "",
+        "mumbai",
+        {
+          secretKey: process.env.SECRET_KEY, // Use secret key if using on the server, get it from dashboard settings
+        }
+      );
 
       const contract = await sdk.getContract(
         "0xE71eE93Ad57c8b355e1bCDFe435B05673d8B4930"
