@@ -37,8 +37,12 @@ export async function POST(request: Request) {
       const contract = await sdk.getContract(
         "0xE71eE93Ad57c8b355e1bCDFe435B05673d8B4930"
       );
+      console.log(body.data.object.metadata.address);
 
-      const tx = await contract.erc721.claimTo(body.object.metadata.address, 1);
+      const tx = await contract.erc721.claimTo(
+        body.data.object.metadata.address,
+        1
+      );
       console.log(tx);
       break;
     // ... handle other event types

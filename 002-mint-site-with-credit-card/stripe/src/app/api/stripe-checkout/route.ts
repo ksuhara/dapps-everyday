@@ -18,7 +18,7 @@ export async function POST(request: Request) {
     ],
     payment_method_types: ["card"],
     mode: "payment",
-    success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/success`,
+    success_url: `${process.env.NEXT_PUBLIC_BASE_URL}/?success`,
     cancel_url: `${process.env.NEXT_PUBLIC_BASE_URL}/?canceled=true`,
     allow_promotion_codes: true,
     metadata: { address: address },
