@@ -1,0 +1,15 @@
+{
+  "name": "gueb3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "http-server"
+  },
+  "dependencies": {
+    "serve": "^14.2.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
